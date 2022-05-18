@@ -21,14 +21,29 @@ body {
         color: #0f161eb2;
       }
       & a {
+        padding-left: 2px;
         color: #0f161eb2;
         text-decoration: underline;
         text-decoration-color: rgba(15, 22, 30, 0.7);
       }
     }
   }
-  & {
-    .website-logo {
-    }
-  }
+}
+
+.hero-title {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.hero {
+  padding-left: 64px;
+}
+
+.next-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-button > img {
+  padding-right: 25px;
 }
