@@ -7,15 +7,13 @@ interface ICoverHeroProps {
   onNextClick: (e: React.MouseEvent) => void;
 }
 
-interface ICompanyDetailsProps {
-  companyName: string;
-  companyUrl: string;
-}
-
 export default function Cover(props: ICoverHeroProps) {
   return (
     <>
-      <Header name="Header name" url="https://www.google.com" />
+      <Header
+        name="Unicorn company 🦄"
+        url="https://www.google.com"
+      />
       <div className="hero">
         <div className="hero-content">
           <h1 className="hero-title">{props.title}</h1>

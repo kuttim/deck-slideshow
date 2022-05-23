@@ -1,24 +1,44 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Slider from './components/Slider';
 import Cover from './components/Cover';
-import { Header } from './components/Header';
+import Next from './assets/Chevron.svg';
+import Slide from './components/Slide';
+import slides from './slide-data';
 
-import './style/header.scss';
+import './style/cover.scss';
 function App() {
   const [index, setIndex] = React.useState(0);
+  const maxIndex = slides.length;
+
+  const gotoNextSlide = () => {
+    if (index === maxIndex) return;
+    setIndex(index + 1);
+  };
+
+  const gotoLastSlide = () => {
+    if (index === 0) return;
+    setIndex(index - 1);
+  };
   return (
     <div>
       <Slider index={index}>
         <Cover
-          author="author"
-          title="title"
-          onNextClick={(e) => setIndex(index + 1)}
+          author="Cover title as prop"
+          title="Cover description as prop"
+          onNextClick={gotoNextSlide}
         />
-        <div>Index 1</div>
-        <div>Index 2</div>
-        <div>Index 3</div>
-        <div>Index 4</div>
-        <div>Index 5</div>
+        {slides.map((slide, i) => {
+          if (i === maxIndex - 1)
+            return <Slide data={slide} onBackClick={gotoLastSlide} />;
+
+          return (
+            <Slide
+              data={slide}
+              onNextClick={gotoNextSlide}
+              onBackClick={gotoLastSlide}
+            />
+          );
+        })}
       </Slider>
     </div>
   );
