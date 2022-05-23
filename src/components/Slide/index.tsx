@@ -13,10 +13,12 @@ type OnNextClick = () => void;
 type OnBackClick = () => void;
 
 export default function Slide({
+  index,
   data,
   onNextClick,
   onBackClick,
 }: {
+  index: number;
   data: Data;
   onNextClick?: OnNextClick;
   onBackClick?: OnBackClick;
@@ -24,7 +26,9 @@ export default function Slide({
   return (
     <>
       <div className="container">
-        <p className="slide-index">index / {slides.length}</p>
+        <p className="slide-index">
+          {index + 1} / {slides.length}
+        </p>
         <div className="slide-title" key={data.title}>
           <h1>{data.title}</h1>
         </div>

@@ -29,10 +29,17 @@ function App() {
         />
         {slides.map((slide, i) => {
           if (i === maxIndex - 1)
-            return <Slide data={slide} onBackClick={gotoLastSlide} />;
+            return (
+              <Slide
+                index={i}
+                data={slide}
+                onBackClick={gotoLastSlide}
+              />
+            );
 
           return (
             <Slide
+              index={i}
               data={slide}
               onNextClick={gotoNextSlide}
               onBackClick={gotoLastSlide}
