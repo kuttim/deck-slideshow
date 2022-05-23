@@ -6,7 +6,7 @@ This is currently work in progress.
 
 ## Demo
 
-Soon to be updated.
+[Visit project hosted on Vercel](https://deck-slideshow.vercel.app/)
 
 ## FAQ
 
