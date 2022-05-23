@@ -23,7 +23,7 @@ function App() {
     <div>
       <Slider index={index}>
         <Cover
-          author="Cover title as prop"
+          author="Cover author as prop"
           title="Cover description as prop"
           onNextClick={gotoNextSlide}
         />
