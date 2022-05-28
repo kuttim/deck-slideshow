@@ -1,5 +1,5 @@
 import '../../style/slide.scss';
-import slides from '../../slide-data';
+import { slides } from '../../data';
 import {
   BsFillCaretLeftFill,
   BsFillCaretRightFill,

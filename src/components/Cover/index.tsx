@@ -1,6 +1,8 @@
 import Next from '../../assets/Chevron.svg';
 import { Header } from '../Header';
 import React from 'react';
+
+import { cover } from '../../data';
 interface ICoverHeroProps {
   title: string;
   author: string;
@@ -10,10 +12,7 @@ interface ICoverHeroProps {
 export default function Cover(props: ICoverHeroProps) {
   return (
     <>
-      <Header
-        name="Unicorn company 🦄"
-        url="https://www.google.com"
-      />
+      <Header name={cover.company.name} url={cover.company.url} />
       <div className="hero">
         <div className="hero-content">
           <h1 className="hero-title">{props.title}</h1>
